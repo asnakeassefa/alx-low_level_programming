@@ -19,10 +19,10 @@ while (b < 58)
 {
 putchar(a);
 putchar(b);
-if (a < 58)
+if (a < 56)
 {
 putchar(',');
-if (a < 58)
+if (a < 57)
 putchar(' ');
 }
 b++;
