@@ -9,43 +9,28 @@
  */
 int main(void)
 {
-int a = 48;
-int d;
-while (a < 58)
+int i = 0;
+while(i<=99)
 {
-int b = 48;
-while (b < 57)
+int j = 0;
+while(j<=99)
 {
-int c = a;
-while (c < 58)
+if (i < j && i != j)
 {
-if (a == 48 && b == 48 && c == 48)
-d = b + 1;
-else
-d = b;
-while (d < 58)
-{
-putchar(a);
-putchar(b);
+putchar((i / 10) + '0');
+putchar((i % 10) + '0');
 putchar(' ');
-putchar(c);
-putchar(d);
-if (a < 58)
+putchar((j / 10) + '0');
+putchar((j % 10) + '0');
+if (i != 98 || j != 99)
 {
-if (a == 57 && b == 56 && c == 57 && d == 57)
-{
-break;
-}
 putchar(',');
 putchar(' ');
 }
-d++;
 }
-c++;
+j++;
 }
-b++;
-}
-a++;
+i++;
 }
 putchar('\n');
 	return (0);
