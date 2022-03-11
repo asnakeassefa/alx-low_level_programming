@@ -15,8 +15,12 @@ while (a < 58)
 {
 putchar(a);
 a++;
+if (a < 58)
+{
 putchar(',');
+if (a < 58)
 putchar(' ');
+}
 }
 putchar('\n');
 	return (0);
