@@ -10,7 +10,7 @@
 int main(void)
 {
 int a = 48;
-
+int d;
 while (a < 58)
 {
 int b = 48;
@@ -19,7 +19,10 @@ while (b < 57)
 int c = a;
 while (c < 58)
 {
-int d = b;
+if (a == 48 && b == 48 && c == 48)
+d = b + 1;
+else
+d = b;
 while (d < 58)
 {
 putchar(a);
