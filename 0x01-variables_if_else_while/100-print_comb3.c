@@ -14,7 +14,6 @@ int a = 48;
 while (a < 57)
 {
 int b = a+1;
-
 while (b < 58)
 {
 putchar(a);
