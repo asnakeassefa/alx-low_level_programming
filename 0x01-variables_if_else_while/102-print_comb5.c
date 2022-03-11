@@ -19,7 +19,7 @@ while (b < 57)
 int c = a;
 while (c < 58)
 {
-int d = b + 1;
+int d = b;
 while (d < 58)
 {
 putchar(a);
@@ -27,9 +27,9 @@ putchar(b);
 putchar(' ');
 putchar(c);
 putchar(d);
-if(a < 58)
+if (a < 58)
 {
-if(a == 57 && b == 56 && c == 57 && d == 57)
+if (a == 57 && b == 56 && c == 57 && d == 57)
 {
 break;
 }
