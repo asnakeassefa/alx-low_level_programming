@@ -9,6 +9,12 @@
  */
 int main(void)
 {
-    printf("_putchar");
+    char put[] = "_putchar";
+    int i = 0;
+    while (i < 8)
+    {
+        putchar(put[i]);
+        i++;
+    }
     return(0);
 }
