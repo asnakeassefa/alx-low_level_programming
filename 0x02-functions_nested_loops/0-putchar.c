@@ -1,7 +1,4 @@
-#include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+#include "main.h"
 /**
  * main - Entry point
  *
@@ -9,12 +6,14 @@
  */
 int main(void)
 {
-    char put[] = "_putchar";
-    int i = 0;
-    while (i < 8)
-    {
-        putchar(put[i]);
-        i++;
-    }
-    return(0);
+	char *sh = "_putchar";
+
+	while (*sh)
+	{
+		_putchar(*sh);
+		sh++;
+	}
+	_putchar('\n');
+
+	return (0);
 }
