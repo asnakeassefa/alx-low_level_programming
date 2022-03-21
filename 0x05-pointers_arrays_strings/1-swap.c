@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * reset_to_98 - Entry point
- * @n: - First operand
+ * swap_int - Entry point
+ * @a: - First operand
+ * @b: - Second operand
  * Nothing to return
  */
 void swap_int(int *a, int *b)
