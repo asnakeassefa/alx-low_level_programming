@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * _puts - Entry point
  * @str: - First operand
