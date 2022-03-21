@@ -10,7 +10,7 @@ void _puts(char *str)
 int val;
 
 val = 0;
-while(val < strlen((const char *)str))
+while(str[val] != 0)
 {
 _putchar(str[val]);
 val++;
