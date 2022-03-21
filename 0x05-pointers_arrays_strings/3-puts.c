@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * _puts - Entry point
  * @str: - First operand
@@ -6,5 +7,10 @@
  */
 void _puts(char *str)
 {
-puts((const char *)str);
+int val;
+
+val = 0;
+while(val < strlen((const char *)str))
+put(str[val]);
+val++;
 }
