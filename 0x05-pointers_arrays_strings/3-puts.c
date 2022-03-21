@@ -11,6 +11,8 @@ int val;
 
 val = 0;
 while(val < strlen((const char *)str))
-put(str[val]);
+{
+_putchar(str[val]);
 val++;
+}
 }
