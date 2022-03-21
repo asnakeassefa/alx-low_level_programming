@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * main - Entry point
+ * reset_to_98 - Entry point
  *
- * Return: Always 0 (Success)
+ * Nothing to return
  */
 
 void reset_to_98(int *n)
