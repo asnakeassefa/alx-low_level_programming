@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * reset_to_98 - Entry point
- * @n - is parameter
+ * n - First operand
  * Nothing to return
  */
 void reset_to_98(int *n)
