@@ -1,14 +1,24 @@
-#include "main.h"
-
+ #include "main.h"
 /**
- * main - check the code
- * _strcat - retrun char
- * @dest: parameter
- * @src: parameter2
- * Return: Always 0.
+ * @src: char type pointer 2nd argument
+ *
+ * Description: concatenates two strings
+ * Return: na
  */
 char *_strcat(char *dest, char *src)
 {
-    char * str = *dest + *src;
-    return str;
+        char *start = dest;
+
+        while (*dest != '\0')
+        {
+                dest++;
+        }
+        while (*src != '\0')
+        {
+                *dest = *src;
+                dest++;
+                src++;
+        }
+        *dest = '\0';
+        return (start);
 }
