@@ -9,13 +9,7 @@
 
 char *_strchr(char *s, char c)
 {
-unsigned int n = 0;
-char *p = s;
-
 while (*s != c)
-{
-p++;
-}
-s = p;
+s++;
 return(s);
 }
