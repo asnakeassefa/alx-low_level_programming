@@ -3,7 +3,7 @@
 /**
  * _strlen_recursion - fun
  * @s: parameter
- *
+ * Return: integer
  */
 int _strlen_recursion(char *s)
 {
