@@ -1,35 +1,31 @@
-#include "main.h"
+#include "holberton.h"
+int prime_checker(int n, int i);
 /**
- * is_prime_number -  Returns the natural square root of a number.
- * @n: int type
- * Return: char type
- **/
+ * is_prime_number - executes prime_checker
+ * @n: input to check
+ * Return: Always 0 (Success)
+ */
 int is_prime_number(int n)
 {
-if (n <= 1)
-{
-return (0);
-}
-return (is_prime(n, 2));
-
+	if (n <= 1)
+		return (0);
+	else if (prime_checker(n, n / 2) > 0)
+		return (1);
+	return (0);
 }
 
 /**
- * is_prime - Entry point
- * Desc: is_prime
- * @n: type int
- * @x: type int
- * Return: Function about prime numbers
- **/
-int is_prime(int n, int x)
+ * prime_checker - checks for prime
+ * @n: input to check
+ * @i: n / 2, then passes to i - 1, checks if greater than 0
+ * Return: prime check
+ */
+int prime_checker(int n, int i)
 {
-if (x < n)
-{
-if (n % x == 0)
-{
-return (0);
-}
-return (is_prime(n, x + 1));
-}
-return (1);
+	if (i == 1)
+		return (1);
+	if (n % i == 0)
+		return (0);
+	else
+		return (prime_checker(n, i - 1));
 }
