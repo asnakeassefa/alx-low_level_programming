@@ -12,6 +12,7 @@
 
 int main(int argc, char *argv[])
 {
+	if(argv[argc-1] != NULL)
 	printf("%d\n", argc);
 	return (0);
 }
