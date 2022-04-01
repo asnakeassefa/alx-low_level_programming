@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 #include <stdlib.h>
 
 /**
@@ -9,9 +10,9 @@
  * Return: int
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
-	while(argc--)
-    	printf("%s\n", *argv++);
+	while (argc--)
+		printf("%s\n", *argv++);
 	return (0);
 }
