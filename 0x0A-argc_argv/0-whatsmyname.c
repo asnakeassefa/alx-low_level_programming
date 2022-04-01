@@ -11,6 +11,6 @@
 
 int main(int argc, char **argv)
 {
-	printf(argv[0]);
+	printf(argv[--argc]);
 	return (0);
 }
