@@ -11,6 +11,6 @@
 
 int main(int argc, char* argv[])
 {
-	printf(argv[argc - 1]);
+	printf(argv[0]);
 	return (0);
 }
