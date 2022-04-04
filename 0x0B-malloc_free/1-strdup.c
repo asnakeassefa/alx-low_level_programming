@@ -7,15 +7,18 @@
  * @str: para
  * Return: char*
  */
-
 char *_strdup(char *str)
 {
 	char *arr;
 	int size = 0;
 	int i;
 
-	while (*str++)
+	if (str == NULL)
+		return (NULL);
+
+	while (str[size])
 		size++;
+
 	arr = malloc(size * sizeof(char) + 1);
 	if (arr == NULL)
 		return (NULL);
