@@ -1,52 +1,43 @@
-#include <stddef.h>
-#include <stdlib.h>
-
+#include "main.h"
 /**
- * argstostr -  concatenates all the arguments
- * @ac: size of arg
- * @av: array of arguments
- * Return: concatinated arguments
+ * argstostr - prints args
+ * @ac: takes in width of grid
+ * @av: height of grid
+ * Return: the args one line at a time
  */
+
 char *argstostr(int ac, char **av)
 {
-	int i = 0, j, size = 0;
-	char *ch;
+	char *str;
+	int count = 0, a = 0, b = 0, c = 0;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
-
-	/* finds the total length of string */
-	for (i = 0; i < ac; i++)
+	while (a < ac)
 	{
-		j = 0;
-		while (av[i][j] != '\0')
+		b = 0;
+		while (av[a][b] != '\0')
 		{
-			size++;
-			j++;
+			count++;
+			b++;
 		}
+		a++;
 	}
-
-	/* allocates memory for size and ac(i.e. for newline at end of each arg) */
-	ch = malloc(sizeof(char) * (size + ac + 1));
-	if (ch == NULL)
+	count = count + ac + 1;
+	str = malloc(sizeof(char) * count);
+	if (str == NULL)
+	{
 		return (NULL);
-
-	/* cp from av to ch */
-	for (i = 0; i < ac; i++)
-	{
-		j = 0;
-		while (av[i][j] != '\0')
-		{
-			*ch = av[i][j];
-			j++;
-			ch++;
-		}
-		*ch = '\n';
-		ch++;
 	}
-
-	ch = '\0';
-	ch++;
-
-	return (ch - size - ac - 1);
+	for (a = 0; a < ac; a++)
+	{
+		for (b = 0; av[a][b] != '\0'; b++)
+		{
+			str[c] = av[a][b];
+			c++;
+		}
+		str[c] = '\n';
+		c++;
+	}
+	return (str);
 }
