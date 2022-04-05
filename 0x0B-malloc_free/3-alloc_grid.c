@@ -28,7 +28,7 @@ int **alloc_grid(int width, int height)
 		{
 			if (twod[i] == NULL)
 			{
-				free(twod[i]);
+				free(twod);
 				return (NULL);
 			}
 			twod[i][j] = 0;
