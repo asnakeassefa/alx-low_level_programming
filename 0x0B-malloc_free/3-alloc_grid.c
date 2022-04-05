@@ -19,19 +19,29 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 	twod = malloc(height * sizeof(int *));
 	if (twod == NULL)
+	{
+		free(twod);
 		return (NULL);
+	}
+
+	if (twod == NULL)
+		return (NULL);
+
 	for (i = 0; i < height; i++)
 	{
 		twod[i] = malloc(width * sizeof(int));
-
+		if (twod[i] == NULL)
+		{
+			for (i--; i >= 0; i--)
+				free(twod[i]);
+			free(twod);
+			return (NULL);
+		}
+	}
+	for (i = 0; i < height; i++)
+	{
 		for (j = 0; j < width; j++)
 		{
-			if (twod[j] == NULL)
-			{
-				free(twod[j]);
-				free(twod);
-				return (NULL);
-			}
 			twod[i][j] = 0;
 		}
 	}
