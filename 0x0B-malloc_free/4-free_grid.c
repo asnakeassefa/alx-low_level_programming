@@ -16,8 +16,10 @@ void free_grid(int **grid, int height)
 	while (grid[i] != NULL)
 		i++;
 
-	for (j = 0; j < i; j++)
+	for (j = 0; j < height; j++)
 	{
-		free(grid[j]);
+		for (i--; i > 0; i--)
+			free(grid[i]);
+		free(grid);
 	}
 }
