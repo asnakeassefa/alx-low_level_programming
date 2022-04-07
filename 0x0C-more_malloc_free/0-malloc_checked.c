@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
-#include <limits.h>
 
 /**
  * malloc_checked - is fun
