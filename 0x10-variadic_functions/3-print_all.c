@@ -8,7 +8,7 @@
 
 void print_c(va_list li)
 {
-	printf("%c", va_arg(li, char));
+	printf("%c", va_arg(li, int));
 }
 
 /**
@@ -30,7 +30,7 @@ void print_i(va_list li)
 
 void print_f(va_list li)
 {
-	printf("%f", va_arg(li, float));
+	printf("%f", va_arg(li, double));
 }
 
 /**
@@ -61,21 +61,20 @@ void print_all(const char *const format, ...)
 	unsigned int i = 0, j;
 	char *separator = "";
 	va_list li;
-
-	va_start(li, format);
-
 	print_t p[] = {
 		{"c", print_c},
 		{"i", print_i},
 		{"s", print_s},
 		{"f", print_f},
 		{NULL, NULL}};
-	while (li && format[i] != NULL)
+
+	va_start(li, format);
+	while (format && format[i] != '\0')
 	{
 		j = 0;
-		while (p[j].c)
+		while (p[j].c != NULL)
 		{
-			while (p[j].c = format[i])
+			if (*(p[j].c) == format[i])
 			{
 				printf("%s", separator);
 				p[j].f(li);
@@ -86,5 +85,11 @@ void print_all(const char *const format, ...)
 		i++;
 	}
 	va_end(li);
-	return ("\n");
+	printf("\n");
+}
+
+int main(void)
+{
+    print_all("ceis", 'B', 3, "stSchool");
+    return (0);
 }
