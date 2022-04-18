@@ -41,7 +41,12 @@ void print_f(va_list li)
 
 void print_s(va_list li)
 {
-	printf("%s", va_arg(li, char *));
+	char *str = va_arg(li, char *);
+
+	if (str)
+		printf("%s", str);
+	else
+		printf("(nil)");
 }
 
 /**
