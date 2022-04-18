@@ -34,7 +34,6 @@ void print_f(va_list li)
 }
 
 /**
- * print_s - prints char
  *
  * @li: is va argument
  */
@@ -86,10 +85,4 @@ void print_all(const char *const format, ...)
 	}
 	va_end(li);
 	printf("\n");
-}
-
-int main(void)
-{
-    print_all("ceis", 'B', 3, "stSchool");
-    return (0);
 }
